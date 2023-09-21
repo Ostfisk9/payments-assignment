@@ -104,9 +104,7 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.10-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.13.10-x86_64-linux)
+    nokogiri (1.13.10-x64-mingw32)
       racc (~> 1.4)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -177,12 +175,15 @@ GEM
     timeout (0.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2023.3)
+      tzinfo (>= 1.0.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     zeitwerk (2.5.4)
 
 PLATFORMS
+  x64-mingw32
   x86_64-darwin-21
   x86_64-linux
 
