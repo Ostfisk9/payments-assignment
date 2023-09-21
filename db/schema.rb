@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_27_183154) do
+ActiveRecord::Schema.define(version: 2023_09_21_203256) do
 
   create_table "packages", force: :cascade do |t|
     t.integer "price_cents", default: 0, null: false
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "municipality"
     t.index ["name"], name: "index_packages_on_name", unique: true
   end
 
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 2022_01_27_183154) do
     t.integer "package_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "municipality"
     t.index ["package_id"], name: "index_prices_on_package_id"
   end
 
