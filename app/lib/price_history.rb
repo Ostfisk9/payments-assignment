@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
 class PriceHistory
+
+  # gives the price history for a package based on year and municipality.
+  # Only takes price from prices with the current year and from the package if its year
+  # corresponds. But it is worth noting it also adds the package price if relevant to the
+  # query.
+  #
+  # returns nil if no results
   def self.call(**args)
     beginning_of_year = Time.zone.local(args[:year]).beginning_of_year
     end_of_year = Time.zone.local(args[:year]).end_of_year
